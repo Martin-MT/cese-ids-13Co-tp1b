@@ -29,6 +29,14 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 
+/*!
+ *  @struct alumno_s
+ *  @brief Almacena los datos de cada alumno
+ *  @param apellido: Apellido del alumno
+ *  @param nombres: Nombres del alumno
+ *  @param documento: Numero de documento del alumno
+ *
+ */
 typedef struct alumno_s {
     char apellidos[30];
     char nombres[30];
@@ -39,8 +47,25 @@ typedef struct alumno_s {
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
+/*!
+ *  @fn bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno)
+ *  @brief: Imprime los datos de un alumno en particular.
+ *  @param [in] cadena: Puntero al inicio de la cadena a serializar con los datos del alumno
+ *  @param [in] espacio: Longitud de la cadena.
+ *  @param [in] alumno: Alumno a serializar (del tipo alumno_t).
+ *  @return resultado: Resultado de la operacion, "False" si no se pudo realizar.
+ *
+ */
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
+/*!
+ *  @fn bool SerializarAlumnos(char * cadena, size_t espacio)
+ *  @brief: Imprime los datos de todos los alumnos cargados en una unica cadena, con formato JSON.
+ *  @param [in] cadena: Puntero al inicio de la cadena a serializar con los datos de los alumnos
+ *  @param [in] espacio: Longitud de la cadena a serializar.
+ *  @return resultado: Resultado de la operacion, "False" si no se pudo realizar.
+ *
+ */
 bool SerializarAlumnos(char * cadena, size_t espacio);
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/

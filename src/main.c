@@ -34,6 +34,14 @@
 
 /*=====[Implementations of private functions]================================*/
 
+/*!
+ * @fn int main(int argc, char *argv[])
+ * @brief Funcion principal del programa
+ * @param  argc     Cantidad de elementos recibidos como argumentos al invocar el programa.
+ * @param  argv     Arreglo de punteros a cada uno de los argumentos recibidos.
+ * @return          Si el programa no puede terminar correctamente, retorna distinto de 0.
+ *
+ */
 int main(int argc, char *argv[]) {
     char cadena[2048];
 

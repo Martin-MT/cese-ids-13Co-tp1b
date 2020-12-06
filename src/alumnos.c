@@ -25,23 +25,39 @@
 
 /*=====[Definitions of public global variables]==============================*/
 
+/*!
+ * Estructura con los datos de Esteban Volentini
+ *
+ */
 static const struct alumno_s ESTEBAN_VOLENTINI = {
     .apellidos = "VOLENTINI",
     .nombres = "Esteban Daniel",
     .documento = "23.517.968",
 };
 
+/*!
+ * Estructura con los datos de Martin Mello Teggia
+ *
+ */
 static const struct alumno_s MARTIN_MELLOTEGGIA = {
     .apellidos = "MELLO TEGGIA",
     .nombres = "Martin",
     .documento = "35.146.241",
 };
 
+/*!
+ * Arreglo con todos los alumnos incluidos
+ *
+ */
 const alumno_t ALUMNOS[] = {
     &ESTEBAN_VOLENTINI,
 	&MARTIN_MELLOTEGGIA,
 };
 
+/*!
+ * Cantidad de alumnos incluidos en el arreglo a utilizar
+ *
+ */
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
